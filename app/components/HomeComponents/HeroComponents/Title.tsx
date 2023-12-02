@@ -1,10 +1,10 @@
 function Title() {
   return (
-    <h1 className="w-full text-3xl  md:text-4xl  font-extrabold text-center ">
+    <h1 className="w-full text-2xl sm:text-3xl leading-6 md:text-4xl text-white  font-extrabold text-center ">
       Remove Image Background
       <br />
-      <span className="underline text-yellow-700"> instantly</span> for{" "}
-      <span className="text-blue-600 underline"> Free</span>
+      <span className="underline text-yellow-500"> instantly</span> for{" "}
+      <span className="text-yellow-500 underline"> Free</span>
     </h1>
   );
 }

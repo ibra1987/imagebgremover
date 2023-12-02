@@ -1,6 +1,9 @@
+"use client";
 import { Feature } from "@/types";
 import { Bot, Gauge, Goal, ListFilter } from "lucide-react";
-import React, { ReactNode } from "react";
+import React, { ReactNode, use, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 type IconType = {
   actualIcon: () => React.ReactNode;
@@ -30,12 +33,42 @@ const icons: Record<string, IconType> = {
     containerColors: "  text-indigo-500",
   },
 };
-function FeatureCard({ keyFeature }: { keyFeature: Feature }) {
+function FeatureCard({
+  keyFeature,
+  index,
+}: {
+  keyFeature: Feature;
+  index: number;
+}) {
+  const boxVariant = {
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.8, delay: index / 4 + 0.3 },
+    },
+    hidden: { opacity: 0, scale: 0 },
+  };
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   return (
-    <div className="p-2  shadow-sm  ">
+    <motion.div
+      ref={ref}
+      variants={boxVariant}
+      initial="hidden"
+      animate={control}
+      className="  p-3 shadow-md rounded font-medium text-gray-500"
+    >
       <div
         className={
-          "w-full flex justify-center items-center space-x-2 my-4 py-2 rounded text-xl lg:text-3xl font-bold " +
+          "w-full flex justify-center   items-center space-x-2 my-4 py-2 rounded text-md font-extrabold " +
           icons[keyFeature.icon as keyof Record<string, IconType>]
             .containerColors
         }
@@ -52,7 +85,7 @@ function FeatureCard({ keyFeature }: { keyFeature: Feature }) {
         <h2>{keyFeature.title}</h2>
       </div>
       <p className="indent-3 text-sm">{keyFeature.desc}</p>
-    </div>
+    </motion.div>
   );
 }
 

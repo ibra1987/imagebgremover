@@ -6,18 +6,18 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <section className="flex flex-col md:flex-row items-start justify-between py-20 px-4    bg-gray-100 rounded-md ">
-      <div className="w-full  lg:w-2/3 flex flex-col justify-center space-y-10 items-center ">
+    <section className="flex flex-col md:flex-row items-start justify-between py-20 px-4  bg-red-400 rounded-md ">
+      <div className="w-full  flex flex-col justify-center space-y-10 items-center ">
         <Title />
         <Paragraph />
         <CallToAction />
       </div>
-      <div className="hidden lg:flex justify-end bg-zinc-200 p-4 rounded-md  border-2 border-white ">
-        <div className=" p-2  bg-zinc-100 shadow-md rounded-md">
+      <div className="hidden lg:flex justify-end   rounded-md border-1 border-red-300   bg-white  ">
+        <div className="p-2  bg-red-300 shadow-xl   rounded-md">
           <Image
             alt="bg-removed"
             src="/images/bg-removed.png"
-            width={500}
+            width={700}
             height={600}
             className="rounded-md h-full"
           />
