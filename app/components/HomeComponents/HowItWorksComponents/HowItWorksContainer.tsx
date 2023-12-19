@@ -1,7 +1,5 @@
 import {
-  ArrowBigRight,
-  ArrowBigRightDashIcon,
-  LucideArrowDownRight,
+ 
   LucideArrowRight,
 } from "lucide-react";
 import FirstSection from "./FirstSection";
@@ -9,7 +7,7 @@ import SecondSection from "./SecondSection";
 
 function HowItWorksContainer() {
   return (
-    <section className="w-full p-4 md:p-10 xl:p-24 shadow-md bg-gray-100  flex flex-col overflow-hidden items-center text-sm md:text-base text-gray-600  rounded">
+    <section className="w-full p-4 md:p-10 xl:p-24 shadow-md bg-red-400  flex flex-col overflow-hidden items-center text-sm md:text-base text-gray-600  rounded">
       <FirstSection />
       <SecondSection />
       <button className="flex items-center justify-center space-x-4 bg-yellow-400 my-6 p-2 font-bold rounded shadow-xl drop-shadow-md tracking-wider hover:bg-yellow-500 transition-all duration-150 ease-out w-full md:w-2/5 text-lg">

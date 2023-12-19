@@ -45,7 +45,7 @@ function SecondSection() {
       <div>
         {lastTwoSteps.map((step: Feature, index: number) => (
           <div key={step.title} className="m-4">
-            <h3 className="text-black text-md  sm:text-xl font-bold p-2">
+            <h3 className="text-blue-800 text-md  sm:text-xl font-bold p-2">
               {index + 3}. {step.title}
             </h3>
             <p className="indent-3 text-sm sm:text-lg">{step.desc}</p>

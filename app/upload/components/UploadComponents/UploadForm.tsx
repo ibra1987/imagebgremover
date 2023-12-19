@@ -1,61 +1,21 @@
-"use client";
-
-import sendFile from "@/httpFunctions/sendFile";
 import { XIcon } from "lucide-react";
-import { ChangeEvent, useRef, useState } from "react";
 
-function UploadForm() {
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [file, setFile] = useState<File | null>();
 
-  // Handlers
+type FormProps = {
+  fileInputRef:React.LegacyRef<HTMLInputElement> | undefined,
+  submit:()=>void,
+  onChange:(e:React.ChangeEvent<HTMLInputElement>)=>void
+  file:File | null,
+  resetFile:()=>void,
+  error:string,
+  loading:boolean
+}
 
-  //onChange
-  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setLoading(false);
-    setError("");
-    if (e.target.files?.length) {
-      setFile(e.target.files[0]);
-      return;
-    }
-    setFile(null);
-  };
-
-  //onSubmit
-  const Submit = async () => {
-    setLoading(true);
-    if (!file) {
-      setError("Error: Please select a file ");
-      setLoading(false);
-      return;
-    }
-
-    try {
-      const formData = new FormData();
-      formData.append("userFile", file!, file?.name);
-      const response = await sendFile(formData);
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // reset form
-  const resetFile = () => {
-    setFile(null);
-
-    if (fileInputRef !== null && fileInputRef?.current) {
-      fileInputRef!.current!.value = "";
-    }
-  };
-
+function UploadForm({
+  file,submit,resetFile,error,loading,onChange,fileInputRef
+}:FormProps) {
   return (
-    <>
-      <div className="w-full  mx-auto  flex flex-col justify-start items-center ">
+    <div className="w-full  mx-auto  flex flex-col justify-start items-center ">
         <label
           htmlFor="filePicker"
           className="w-full text-center hover:cursor-pointer bg-gray-700 p-10 outline-none border-2 border-gray-200 hover:bg-gray-900 transition-colors delay-75 ease-in-out  text-medium flex flex-col justify-start items-center "
@@ -90,8 +50,8 @@ function UploadForm() {
         )}
 
         <button
-          onClick={Submit}
-          disabled={loading || error.length > 0}
+          onClick={submit}
+          disabled={loading || error?.length > 0}
           className={
             loading
               ? " w-full  lg:w-1/4 bg-red-400 py-2 text-gray-100 tracking-wide m-6 transition-all duration-200 ease-out rounded font-bold"
@@ -100,9 +60,8 @@ function UploadForm() {
         >
           {loading ? "processing ..." : "Remove Background"}
         </button>
-      </div>
-    </>
-  );
+        </div>
+  )
 }
 
-export default UploadForm;
+export default UploadForm

@@ -7,7 +7,7 @@ function UploadInput(props: InputProps) {
       type={props.type}
       className={props.cssClass}
       placeholder={props.placeholder}
-      value={props.value}
+      
       onChange={props.onChange}
     />
   );

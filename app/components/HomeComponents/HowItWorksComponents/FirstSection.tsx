@@ -32,12 +32,12 @@ function FirstSection() {
       initial="hidden"
       animate={control}
       variants={slideVariant}
-      className="w-full mb-1 border shadow-sm flex flex-col md:flex-row justify-between items-center p-2 bg-gray-50  rounded "
+      className="w-full mb-1 border shadow-sm flex flex-col md:flex-row justify-between items-center p-2 bg-white  rounded "
     >
       <div>
         {firstTwoSteps.map((step: Feature, index: number) => (
           <div key={step.title} className="m-4 ">
-            <h3 className="text-black  text-md  sm:text-xl font-bold ">
+            <h3 className="text-blue-800  text-md  sm:text-xl font-bold ">
               {index + 1}. {step.title}
             </h3>
             <p className="indent-3 p-2 w-full text-sm sm:text-lg ">

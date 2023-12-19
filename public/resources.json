@@ -1,0 +1,98 @@
+{
+  "/models/small": {
+    "chunks": {
+      "7001d60734fdc112dd9c062635fb59cd401fb82a9d4213134bce4dbd655c803a": {
+        "range": [
+          0,
+          44342435
+        ]
+      }
+    },
+    "size": 44342436,
+    "mime": "application/octet-steam"
+  },
+  "/models/medium": {
+    "chunks": {
+      "b6e8497ba978a6f5fbb647e419d2696cd80df5a23cb6a8ea532021911bd76acb": {
+        "range": [
+          0,
+          88188478
+        ]
+      }
+    },
+    "size": 88188479,
+    "mime": "application/octet-steam"
+  },
+  "/onnxruntime-web/ort-wasm.wasm": {
+    "chunks": {
+      "0ee8126744a713debb3b0fc1e041d56755514cd764fd1e10496b3a3b7183cf20": {
+        "range": [
+          0,
+          9859591
+        ]
+      }
+    },
+    "size": 9859592,
+    "mime": "application/wasm"
+  },
+  "/onnxruntime-web/ort-wasm-threaded.wasm": {
+    "chunks": {
+      "08f7410781ecce25e040e5868b95f27ae76c18d6b957006fc6a4e65dc9fd1ba6": {
+        "range": [
+          0,
+          9799030
+        ]
+      }
+    },
+    "size": 9799031,
+    "mime": "application/wasm"
+  },
+  "/onnxruntime-web/ort-wasm-simd.wasm": {
+    "chunks": {
+      "3a52aac4a0ac9713ac3afa8902aba2059fd4f7ea1fa7cd7da74ac23b2567fb45": {
+        "range": [
+          0,
+          10839664
+        ]
+      }
+    },
+    "size": 10839665,
+    "mime": "application/wasm"
+  },
+  "/onnxruntime-web/ort-wasm-simd.jsep.wasm": {
+    "chunks": {
+      "3c5c9e3fe8454c348196ebcad33796794c319cb2ea46da13b71842eee77a6630": {
+        "range": [
+          0,
+          17700400
+        ]
+      }
+    },
+    "size": 17700401,
+    "mime": "application/wasm"
+  },
+  "/onnxruntime-web/ort-wasm-simd-threaded.wasm": {
+    "chunks": {
+      "1f2b6dd15bd056a9f7965974fe15e2858e5373b94a02768b7c4e5b72aa456577": {
+        "range": [
+          0,
+          10797935
+        ]
+      }
+    },
+    "size": 10797936,
+    "mime": "application/wasm"
+  },
+  "/onnxruntime-web/ort-wasm-simd-threaded.jsep.wasm": {
+    "chunks": {
+      "4a4217bf6cab4d3acee30c5ab57765b9ec7ba4986afa2ba76307f844b8a3dfd2": {
+        "range": [
+          0,
+          19348757
+        ]
+      }
+    },
+    "size": 19348758,
+    "mime": "application/wasm"
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import UploadForm from "./components/UploadComponents/UploadForm";
+import ProcessingContainer from "./components/UploadComponents/ProcessingContainer";
 
 function Page() {
   return (
@@ -7,7 +7,7 @@ function Page() {
       <h1 className="text-3xl w-full flex font-extrabold p-4 justify-center">
         Remove Image Background
       </h1>
-      <UploadForm />
+<ProcessingContainer/>
     </main>
   );
 }
