@@ -13,5 +13,9 @@ const navLinks: NavLink[] = [
     name: "Login",
     path: "/login",
   },
+  {
+    name:"AI icon generator",
+    path:"/ai-icon-generator"
+  }
 ];
 export default navLinks;
