@@ -31,12 +31,12 @@ function SecondSection() {
       initial="hidden"
       animate={control}
       variants={slideVariant}
-      className="w-full  p-2 bg-white  border shadow-md  flex flex-col md:flex-row justify-between items-center  rounded"
+      className="w-full mb-1 border shadow-xl flex flex-col md:flex-row justify-between items-center p-2 bg-white  rounded "
     >
-      <div className="rounded bg-red-400">
+      <div className="rounded bg-blue-300">
         <Image
           src="/images/bgRemoved_happy_man.png"
-          width={300}
+          width={350}
           height={200}
           alt="happy_man_boy"
           className="rounded"

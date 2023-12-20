@@ -54,8 +54,8 @@ function UploadForm({
           disabled={loading || error?.length > 0}
           className={
             loading
-              ? " w-full  lg:w-1/4 bg-red-400 py-2 text-gray-100 tracking-wide m-6 transition-all duration-200 ease-out rounded font-bold"
-              : "w-full lg:w-1/4 bg-red-600 hover:bg-red-700 py-2 text-gray-100 tracking-wide m-6 transition-all duration-200 ease-out rounded font-bold"
+              ? " w-full  lg:w-1/4 bg-blue-400 py-2 text-gray-100 tracking-wide m-6 transition-all duration-200 ease-out rounded font-bold"
+              : "w-full lg:w-1/4 bg-blue-600 hover:bg-blue-700 py-2 text-gray-100 tracking-wide m-6 transition-all duration-200 ease-out rounded font-bold"
           }
         >
           {loading ? "processing ..." : "Remove Background"}
