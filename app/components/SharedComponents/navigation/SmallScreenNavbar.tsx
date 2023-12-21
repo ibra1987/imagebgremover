@@ -12,9 +12,7 @@ type SmallMenuProps = {
 function SmallScreenNavbar({showSmallScreenMenu, isMenuOpen}:SmallMenuProps) {
     const path = usePathname()
   return (
-    <nav className={` flex animation duration-175 ease-in my-5  ${
-        isMenuOpen ? "menu-open" : "menu-closed"
-      }` }>
+    <nav className=" md:hidden flex animation duration-175 ease-in my-5 ">
     <ul className="w-full flex flex-col items-start justify-start space-y-2">
         {navLinks.map((navlink: NavLink) => (
           <li className={
