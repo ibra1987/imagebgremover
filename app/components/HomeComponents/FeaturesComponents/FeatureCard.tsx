@@ -44,7 +44,7 @@ function FeatureCard({
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.8, delay: index / 4 + 0.3 },
+      transition: { duration: 0.5, delay: index / 4 + 0.2 },
     },
     hidden: { opacity: 0, scale: 0 },
   };
@@ -64,7 +64,7 @@ function FeatureCard({
       variants={boxVariant}
       initial="hidden"
       animate={control}
-      className="  p-3 shadow-md rounded font-medium text-gray-500"
+      className="  p-3 rounded font-medium text-gray-500"
     >
       <div
         className={

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import iconSizes from "@/assets/content/iconSizes";
-
+import sendImagePrompt from "@/httpFunctions/sendImagePrompt";
 
 function PromptForm() {
   const [iconSize, setIconSize] = useState(iconSizes[0]);
@@ -22,9 +22,9 @@ function PromptForm() {
   }
 
   // form submission
-  const submit=(e:React.FormEvent<HTMLFormElement>)=>{
+  const submit=async (e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault()
-    console.log(prompt,iconSize)
+    await sendImagePrompt(prompt)
 }
   return (
     <form className="flex flex-col justify-start items-center space-y-3 " onSubmit={submit}>
@@ -48,8 +48,8 @@ function PromptForm() {
         }
       </select>
       <button
-   
-       className="bg-blue-500 hover:bg-blue-600 animation duration-150 ease-in du w-full sm:w-2/5 p-2 px-6 rounded text-white font-medium tracking-wider">
+
+      className="bg-blue-500 hover:bg-blue-600 animation duration-150 ease-in du w-full sm:w-2/5 p-2 px-6 rounded text-white font-medium tracking-wider">
         Generate Icon
       </button>
     </form>

@@ -4,7 +4,7 @@ import PromptForm from "./components/PromptForm";
 const liClass =" flex space-x-1 items-center"
 function page() {
   return (
-    <main className="py-8 flex flex-col justify-start items-center">
+    <main className="w-full py-8 flex flex-col justify-start items-center">
         <h1 className="text-3xl font-bold">Generate free icons with the power of AI</h1>
         <ol className="m-8 text-sm">
             <li className={liClass}>
